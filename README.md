@@ -42,7 +42,7 @@ The app is static (HTML, JS, CSS, and JSON data). Serve the **`dist/`** folder f
 - **Netlify**: Same idea — Build command `npm run build`, Publish directory `dist`. Commit `public/` so the built site includes the data.
 - **GitHub Pages**: Run `npm run build` locally, push the contents of `dist/` to the `gh-pages` branch (or use a GitHub Action that runs `python scripts/build_data.py` then `npm run build` and deploys `dist/`).
 
-After deploy, share the site URL (e.g. `https://vercel.com/vinaybembalges-projects/player-journey-viz`).
+After deploy, site URL (e.g. **https://vercel.com/vinaybembalges-projects/player-journey-viz** ).
 
 ## Project layout
 
