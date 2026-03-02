@@ -1,0 +1,1 @@
+{"mapId": "Lockdown", "date": "February_13", "events": [{"px": 271, "py": 319, "ts": 1770978421, "event": "BotKilled", "isHuman": true, "userId": "b3340cc5-c9fa-4108-b56d-0728bc978a22"}], "paths": {"b3340cc5-c9fa-4108-b56d-0728bc978a22": [{"px": 273, "py": 317, "ts": 1770978381}, {"px": 271, "py": 319, "ts": 1770978416}]}}

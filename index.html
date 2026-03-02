@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player Journey Visualization — LILA BLACK</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <aside class="sidebar-left">
+        <header>
+          <h1>Player Journey Visualization</h1>
+          <p class="subtitle">LILA BLACK — Level Design Tool</p>
+        </header>
+        <div class="controls">
+          <div class="filters">
+            <label>
+              Map
+              <select id="filter-map">
+                <option value="">— Select map —</option>
+              </select>
+            </label>
+            <label>
+              Date
+              <select id="filter-date">
+                <option value="">— Select date —</option>
+              </select>
+            </label>
+            <label>
+              Match
+              <select id="filter-match">
+                <option value="">— Select match —</option>
+              </select>
+            </label>
+          </div>
+          <div class="timeline">
+            <button type="button" id="btn-play" aria-label="Play">Play</button>
+            <input type="range" id="timeline-slider" min="0" max="100" value="100" />
+            <span id="time-label">—</span>
+          </div>
+          <div class="heatmaps">
+            <label><input type="checkbox" id="heat-kills" /> Kill zones</label>
+            <label><input type="checkbox" id="heat-deaths" /> Death zones</label>
+            <label><input type="checkbox" id="heat-traffic" /> High traffic</label>
+          </div>
+        </div>
+      </aside>
+      <main class="map-area">
+        <div class="map-container">
+          <canvas id="canvas" width="1024" height="1024"></canvas>
+          <canvas id="heatmap-layer" width="1024" height="1024"></canvas>
+        </div>
+      </main>
+      <aside class="sidebar-right">
+        <div class="legend">
+          <span class="legend-item human"><span class="legend-marker path">—</span><span class="legend-label">Human path</span></span>
+          <span class="legend-item bot"><span class="legend-marker path">—</span><span class="legend-label">Bot path</span></span>
+          <span class="legend-item event-kill"><span class="legend-marker circle">●</span><span class="legend-label">Kill</span></span>
+          <span class="legend-item event-killed"><span class="legend-marker circle">●</span><span class="legend-label">Killed</span></span>
+          <span class="legend-item event-botkill"><span class="legend-marker circle">●</span><span class="legend-label">Bot kill</span></span>
+          <span class="legend-item event-botkilled"><span class="legend-marker circle">●</span><span class="legend-label">Bot killed</span></span>
+          <span class="legend-item event-loot"><span class="legend-marker cross">×</span><span class="legend-label">Loot</span></span>
+          <span class="legend-item event-storm"><span class="legend-marker star">*</span><span class="legend-label">Killed by storm</span></span>
+        </div>
+      </aside>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
